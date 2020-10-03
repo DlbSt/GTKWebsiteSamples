@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="GTKWebsiteSamples.Views.DialogPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:toolkit="clr-namespace:FormsGtkToolkit.Controls;assembly=FormsGtkToolkit.Controls"
+    Title="{Binding Title}"
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <StackLayout HorizontalOptions="FillAndExpand">
+        <Button
+            Command="{Binding OnShowMessageBoxCommand, Mode=OneTime}"
+            Text="Show simple message box" />
+        <Button
+            Command="{Binding OnShowActionSheetCommand, Mode=OneTime}"
+            Text="Show action sheet" />
+        <toolkit:ColorButton
+            Title="Choose Color"
+            HeightRequest="48"
+            Color="{Binding SelectedColor, Mode=TwoWay}" />
+        <toolkit:FileButton
+            Title="Select file"
+            CurrentFolder="{Binding CurrentFolder, Mode=OneWayToSource}"
+            FileAction="SelectFolder"
+            HeightRequest="48"
+            ShowHidden="true" />
+        <toolkit:FontButton
+            Title="Choose your font"
+            FontName="Verdana"
+            HeightRequest="48"
+            ShowSize="true"
+            ShowStyle="true" />
+        <toolkit:ScaleButton
+            HeightRequest="48"
+            Icon="ZoomIn"
+            Maximum="10"
+            Minimum="0"
+            StepIncrement="1"
+            Value="{Binding ScaleButtonValue, Mode=TwoWay}" />
+    </StackLayout>
+
+</ContentPage>
