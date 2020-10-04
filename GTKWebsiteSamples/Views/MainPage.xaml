@@ -9,6 +9,8 @@
         <StackLayout>
             <Button Command="{Binding OnNavigateToDialogPage, Mode=OneTime}"
                     Text="Dialogs - Message Boxes and Simple Dialogs" />
+            <Button Command="{Binding OnNavigateToLicensePage, Mode=OneTime}"
+                    Text="Licenses" />
         </StackLayout>
     </ScrollView>
 </ContentPage>

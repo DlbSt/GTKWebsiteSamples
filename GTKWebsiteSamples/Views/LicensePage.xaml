@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="GTKWebsiteSamples.Views.LicensePage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:toolkit="clr-namespace:FormsGtkToolkit.Controls;assembly=FormsGtkToolkit.Controls"
+             Title="{Binding Title, Mode=OneTime}"
+             prism:ViewModelLocator.AutowireViewModel="True">
+    <StackLayout BindableLayout.ItemsSource="{Binding Licenses, Mode=OneTime}"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="FillAndExpand">
+        <BindableLayout.ItemTemplate>
+            <DataTemplate>
+                <StackLayout HorizontalOptions="CenterAndExpand"
+                             Orientation="Horizontal">
+                    <toolkit:HyperLink HorizontalOptions="Center"
+                                       Text="{Binding LibraryName, Mode=OneTime}"
+                                       Uri="{Binding LibraryUrl, Mode=OneTime}" />
+                    <Label HorizontalOptions="Center"
+                           Text="{Binding Copyright, Mode=OneTime}"
+                           WidthRequest="300" />
+                    <toolkit:HyperLink HorizontalOptions="Center"
+                                       Text="{Binding LicenseType, Mode=OneTime}"
+                                       Uri="{Binding LicenseUrl, Mode=OneTime}" />
+                </StackLayout>
+            </DataTemplate>
+        </BindableLayout.ItemTemplate>
+    </StackLayout>
+</ContentPage>

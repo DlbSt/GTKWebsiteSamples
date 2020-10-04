@@ -26,6 +26,7 @@ namespace GTKWebsiteSamples
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<DialogPage, DialogPageViewModel>();
+            containerRegistry.RegisterForNavigation<LicensePage, LicensePageViewModel>();
         }
     }
 }

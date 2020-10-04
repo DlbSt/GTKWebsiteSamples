@@ -21,10 +21,11 @@ namespace GTKWebsiteSamples.ViewModels
 
         #region Commands
         public DelegateCommand OnNavigateToDialogPage { get; set; }
+        public DelegateCommand OnNavigateToLicensePage { get; set; }
         #endregion
 
         #region Services
-        private INavigationService _navigationService; 
+        private INavigationService _navigationService;
         #endregion
 
         #region Constructor
@@ -33,12 +34,18 @@ namespace GTKWebsiteSamples.ViewModels
             _navigationService = navigationService;
 
             OnNavigateToDialogPage = new DelegateCommand(NavigateToDialogPage);
+            OnNavigateToLicensePage = new DelegateCommand(NavigateToLicensePage);
         } 
         #endregion
 
         private async void NavigateToDialogPage()
         {
             await _navigationService.NavigateAsync(NavigationEnum.DialogPage.ToString());
+        }
+
+        private async void NavigateToLicensePage()
+        {
+            await _navigationService.NavigateAsync(NavigationEnum.LicensePage.ToString());
         }
     }
 }

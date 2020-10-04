@@ -7,6 +7,7 @@ namespace GTKWebsiteSamples.Enums
     public enum NavigationEnum
     {
         MainPage,
-        DialogPage
+        DialogPage,
+        LicensePage
     }
 }
