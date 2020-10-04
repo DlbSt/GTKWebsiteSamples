@@ -40,6 +40,13 @@ namespace GTKWebsiteSamples.ViewModels
             get { return scaleButtonValue; }
             set { SetProperty(ref scaleButtonValue, value); }
         }
+
+        private string fontName = "Verdana Bold 10";
+        public string FontName
+        {
+            get { return fontName; }
+            set { SetProperty(ref fontName, value); }
+        }
         #endregion
 
         #region Services

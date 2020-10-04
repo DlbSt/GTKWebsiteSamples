@@ -26,17 +26,23 @@
             ShowHidden="true" />
         <toolkit:FontButton
             Title="Choose your font"
-            FontName="Verdana"
+            FontName="{Binding FontName, Mode=TwoWay}"
             HeightRequest="48"
             ShowSize="true"
             ShowStyle="true" />
         <toolkit:ScaleButton
+            Padding="10,0,0,0"
             HeightRequest="48"
             Icon="ZoomIn"
             Maximum="10"
             Minimum="0"
             StepIncrement="1"
+            WidthRequest="200"
             Value="{Binding ScaleButtonValue, Mode=TwoWay}" />
+        <Label
+            FontSize="Body"
+            HorizontalOptions="Center"
+            Text="{Binding ScaleButtonValue, Mode=OneWay, StringFormat='{0:N2}'}" />
     </StackLayout>
 
 </ContentPage>
