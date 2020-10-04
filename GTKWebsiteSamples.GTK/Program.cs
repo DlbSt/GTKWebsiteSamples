@@ -25,7 +25,7 @@ namespace GTKWebsiteSamples.GTK
             var app = new App(new GtkInitializer());
             var window = new FormsWindow();
             window.LoadApplication(app);
-            window.SetApplicationTitle("GTK# Website Samples");
+            window.SetApplicationTitle("GTK# Samples");
             window.Show();
 
             Gtk.Application.Run();

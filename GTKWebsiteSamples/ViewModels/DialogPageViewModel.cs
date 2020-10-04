@@ -13,7 +13,7 @@ namespace GTKWebsiteSamples.ViewModels
         #endregion
 
         #region Properties
-        private string title;
+        private string title = "Dialogs - Message Boxes and Simple Dialogs";
         public string Title
         {
             get { return title; }
@@ -49,8 +49,6 @@ namespace GTKWebsiteSamples.ViewModels
         #region Constructor
         public DialogPageViewModel(IPageDialogService pageDialogService)
         {
-            Title = "Dialog Page";
-
             _pageDialogService = pageDialogService;
 
             OnShowMessageBoxCommand = new DelegateCommand(ShowMessageBox);
