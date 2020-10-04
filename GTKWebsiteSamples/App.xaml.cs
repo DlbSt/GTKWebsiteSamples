@@ -18,12 +18,13 @@ namespace GTKWebsiteSamples
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/" + NavigationEnum.DialogPage.ToString());
+            await NavigationService.NavigateAsync("NavigationPage/" + NavigationEnum.MainPage.ToString());
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
+            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<DialogPage, DialogPageViewModel>();
         }
     }

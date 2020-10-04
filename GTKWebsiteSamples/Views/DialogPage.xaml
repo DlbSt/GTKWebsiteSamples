@@ -6,14 +6,18 @@
              xmlns:toolkit="clr-namespace:FormsGtkToolkit.Controls;assembly=FormsGtkToolkit.Controls"
              Title="{Binding Title}"
              prism:ViewModelLocator.AutowireViewModel="True">
-    <StackLayout HorizontalOptions="FillAndExpand">
+    <StackLayout HorizontalOptions="FillAndExpand"
+                 VerticalOptions="FillAndExpand">
         <Frame Margin="10,10,10,0"
                Padding="10"
-               BorderColor="Red">
-            <StackLayout>
+               BorderColor="Red"
+               VerticalOptions="Start">
+            <StackLayout HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand">
                 <Label Margin="0,0,0,5"
                        FontAttributes="Bold"
                        FontSize="Caption"
+                       HeightRequest="25"
                        Text="Simple Dialogs" />
                 <Button Command="{Binding OnShowMessageBoxCommand, Mode=OneTime}"
                         Text="Show simple message box" />
@@ -28,11 +32,13 @@
                 <Label Margin="0,0,0,5"
                        FontAttributes="Bold"
                        FontSize="Caption"
+                       HeightRequest="25"
                        Text="Gtk Toolkit Dialogs" />
                 <Frame Margin="5"
                        Padding="5"
-                       BorderColor="LimeGreen">
-                    <StackLayout>
+                       BorderColor="LimeGreen"
+                       VerticalOptions="FillAndExpand">
+                    <StackLayout VerticalOptions="FillAndExpand">
                         <toolkit:ColorButton Title="Choose Color"
                                              HeightRequest="48"
                                              Color="{Binding SelectedColor, Mode=TwoWay}" />
@@ -51,6 +57,7 @@
                                             ShowSize="true"
                                             ShowStyle="true" />
                         <Label FontSize="Body"
+                               HeightRequest="30"
                                HorizontalOptions="Center"
                                Text="{Binding FontName, Mode=OneWay}" />
                     </StackLayout>
@@ -68,6 +75,7 @@
                                              WidthRequest="200"
                                              Value="{Binding ScaleButtonValue, Mode=TwoWay}" />
                         <Label FontSize="Body"
+                               HeightRequest="30"
                                HorizontalOptions="Center"
                                Text="{Binding ScaleButtonValue, Mode=OneWay, StringFormat='{0:N2}'}" />
                     </StackLayout>
@@ -75,5 +83,4 @@
             </StackLayout>
         </Frame>
     </StackLayout>
-
 </ContentPage>
