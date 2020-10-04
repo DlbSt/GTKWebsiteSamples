@@ -27,14 +27,7 @@ namespace GTKWebsiteSamples.ViewModels
             set { SetProperty(ref selectedColor, value); }
         }
 
-        private string currentFolder;
-        public string CurrentFolder
-        {
-            get { return currentFolder; }
-            set { SetProperty(ref currentFolder, value); }
-        }
-
-        private double scaleButtonValue;
+        private double scaleButtonValue = 5.00;
         public double ScaleButtonValue
         {
             get { return scaleButtonValue; }

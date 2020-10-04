@@ -10,9 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="FormsGtkToolkit.Controls">
-      <HintPath>..\..\FormsGtkToolkit-master\src\Controls\Controls\bin\Release\netstandard2.0\FormsGtkToolkit.Controls.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\..\FormsGtkToolkit-master\src\Controls\Controls\Controls.csproj" />
   </ItemGroup>
 
 </Project>

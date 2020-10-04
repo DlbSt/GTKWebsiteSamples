@@ -41,12 +41,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\GtkSharp\2.12\lib\gtk-sharp-2.0\atk-sharp.dll</HintPath>
     </Reference>
-    <Reference Include="FormsGtkToolkit.Controls">
-      <HintPath>..\..\FormsGtkToolkit-master\src\Controls\Controls\bin\Release\netstandard2.0\FormsGtkToolkit.Controls.dll</HintPath>
-    </Reference>
-    <Reference Include="FormsGtkToolkit.Controls.GTK">
-      <HintPath>..\..\FormsGtkToolkit-master\src\Controls\Controls.GTK\bin\Release\FormsGtkToolkit.Controls.GTK.dll</HintPath>
-    </Reference>
     <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\GtkSharp\2.12\lib\gtk-sharp-2.0\gdk-sharp.dll</HintPath>
@@ -109,6 +103,14 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\FormsGtkToolkit-master\src\Controls\Controls.GTK\Controls.GTK.csproj">
+      <Project>{c7c5bccb-9cf6-44cb-bfdf-4c72a8305b13}</Project>
+      <Name>Controls.GTK</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FormsGtkToolkit-master\src\Controls\Controls\Controls.csproj">
+      <Project>{1a51657b-8414-4e3e-b317-e5ffed9f6a2d}</Project>
+      <Name>Controls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GTKWebsiteSamples\GTKWebsiteSamples.csproj">
       <Project>{028b8503-0b35-4f97-a15a-65c87ba1f618}</Project>
       <Name>GTKWebsiteSamples</Name>

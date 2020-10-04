@@ -1,48 +1,79 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-    x:Class="GTKWebsiteSamples.Views.DialogPage"
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:prism="http://prismlibrary.com"
-    xmlns:toolkit="clr-namespace:FormsGtkToolkit.Controls;assembly=FormsGtkToolkit.Controls"
-    Title="{Binding Title}"
-    prism:ViewModelLocator.AutowireViewModel="True">
+<ContentPage x:Class="GTKWebsiteSamples.Views.DialogPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:toolkit="clr-namespace:FormsGtkToolkit.Controls;assembly=FormsGtkToolkit.Controls"
+             Title="{Binding Title}"
+             prism:ViewModelLocator.AutowireViewModel="True">
     <StackLayout HorizontalOptions="FillAndExpand">
-        <Button
-            Command="{Binding OnShowMessageBoxCommand, Mode=OneTime}"
-            Text="Show simple message box" />
-        <Button
-            Command="{Binding OnShowActionSheetCommand, Mode=OneTime}"
-            Text="Show action sheet" />
-        <toolkit:ColorButton
-            Title="Choose Color"
-            HeightRequest="48"
-            Color="{Binding SelectedColor, Mode=TwoWay}" />
-        <toolkit:FileButton
-            Title="Select file"
-            CurrentFolder="{Binding CurrentFolder, Mode=OneWayToSource}"
-            FileAction="SelectFolder"
-            HeightRequest="48"
-            ShowHidden="true" />
-        <toolkit:FontButton
-            Title="Choose your font"
-            FontName="{Binding FontName, Mode=TwoWay}"
-            HeightRequest="48"
-            ShowSize="true"
-            ShowStyle="true" />
-        <toolkit:ScaleButton
-            Padding="10,0,0,0"
-            HeightRequest="48"
-            Icon="ZoomIn"
-            Maximum="10"
-            Minimum="0"
-            StepIncrement="1"
-            WidthRequest="200"
-            Value="{Binding ScaleButtonValue, Mode=TwoWay}" />
-        <Label
-            FontSize="Body"
-            HorizontalOptions="Center"
-            Text="{Binding ScaleButtonValue, Mode=OneWay, StringFormat='{0:N2}'}" />
+        <Frame Margin="10,10,10,0"
+               Padding="10"
+               BorderColor="Red">
+            <StackLayout>
+                <Label Margin="0,0,0,5"
+                       FontAttributes="Bold"
+                       FontSize="Caption"
+                       Text="Simple Dialogs" />
+                <Button Command="{Binding OnShowMessageBoxCommand, Mode=OneTime}"
+                        Text="Show simple message box" />
+                <Button Command="{Binding OnShowActionSheetCommand, Mode=OneTime}"
+                        Text="Show action sheet" />
+            </StackLayout>
+        </Frame>
+        <Frame Margin="10"
+               Padding="10"
+               BorderColor="Blue">
+            <StackLayout>
+                <Label Margin="0,0,0,5"
+                       FontAttributes="Bold"
+                       FontSize="Caption"
+                       Text="Gtk Toolkit Dialogs" />
+                <Frame Margin="5"
+                       Padding="5"
+                       BorderColor="LimeGreen">
+                    <StackLayout>
+                        <toolkit:ColorButton Title="Choose Color"
+                                             HeightRequest="48"
+                                             Color="{Binding SelectedColor, Mode=TwoWay}" />
+                        <Frame BackgroundColor="{Binding SelectedColor, Mode=OneWay}"
+                               HorizontalOptions="Center"
+                               WidthRequest="150" />
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="5"
+                       Padding="5"
+                       BorderColor="LimeGreen">
+                    <StackLayout>
+                        <toolkit:FontButton Title="Choose your font"
+                                            FontName="{Binding FontName, Mode=TwoWay}"
+                                            HeightRequest="48"
+                                            ShowSize="true"
+                                            ShowStyle="true" />
+                        <Label FontSize="Body"
+                               HorizontalOptions="Center"
+                               Text="{Binding FontName, Mode=OneWay}" />
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="5"
+                       Padding="5"
+                       BorderColor="LimeGreen">
+                    <StackLayout>
+                        <toolkit:ScaleButton Padding="10,0,0,0"
+                                             HeightRequest="48"
+                                             Icon="ZoomIn"
+                                             Maximum="10"
+                                             Minimum="0"
+                                             StepIncrement="1"
+                                             WidthRequest="200"
+                                             Value="{Binding ScaleButtonValue, Mode=TwoWay}" />
+                        <Label FontSize="Body"
+                               HorizontalOptions="Center"
+                               Text="{Binding ScaleButtonValue, Mode=OneWay, StringFormat='{0:N2}'}" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </Frame>
     </StackLayout>
 
 </ContentPage>
