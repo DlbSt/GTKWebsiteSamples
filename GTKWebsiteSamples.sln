@@ -7,10 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTKWebsiteSamples.GTK", "GT
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GTKWebsiteSamples", "GTKWebsiteSamples\GTKWebsiteSamples.csproj", "{028B8503-0B35-4F97-A15A-65C87BA1F618}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Controls", "..\FormsGtkToolkit-master\src\Controls\Controls\Controls.csproj", "{1A51657B-8414-4E3E-B317-E5FFED9F6A2D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controls.GTK", "..\FormsGtkToolkit-master\src\Controls\Controls.GTK\Controls.GTK.csproj", "{C7C5BCCB-9CF6-44CB-BFDF-4C72A8305B13}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,14 +21,6 @@ Global
 		{028B8503-0B35-4F97-A15A-65C87BA1F618}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{028B8503-0B35-4F97-A15A-65C87BA1F618}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{028B8503-0B35-4F97-A15A-65C87BA1F618}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1A51657B-8414-4E3E-B317-E5FFED9F6A2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1A51657B-8414-4E3E-B317-E5FFED9F6A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1A51657B-8414-4E3E-B317-E5FFED9F6A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1A51657B-8414-4E3E-B317-E5FFED9F6A2D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C7C5BCCB-9CF6-44CB-BFDF-4C72A8305B13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C7C5BCCB-9CF6-44CB-BFDF-4C72A8305B13}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C7C5BCCB-9CF6-44CB-BFDF-4C72A8305B13}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C7C5BCCB-9CF6-44CB-BFDF-4C72A8305B13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

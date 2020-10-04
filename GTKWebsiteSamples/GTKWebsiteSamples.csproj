@@ -13,4 +13,16 @@
     <ProjectReference Include="..\..\FormsGtkToolkit-master\src\Controls\Controls\Controls.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="FormsGtkToolkit.Controls">
+      <HintPath>..\..\FormsGtkToolkit\src\Controls\Controls\bin\Release\netstandard2.0\FormsGtkToolkit.Controls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="FormsGtkToolkit.Controls.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
